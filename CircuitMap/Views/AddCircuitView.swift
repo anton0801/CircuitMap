@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct AddCircuitView: View {
     @EnvironmentObject var store: AppStore
@@ -182,4 +183,14 @@ struct AddCircuitView: View {
     }
 
     private func dismiss() { presentationMode.wrappedValue.dismiss() }
+}
+
+
+extension ScreenWire: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool { return true }
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard let pan = gestureRecognizer as? UIPanGestureRecognizer, let view = pan.view else { return false }
+        let velocity = pan.velocity(in: view), translation = pan.translation(in: view)
+        return translation.x > 0 && abs(velocity.x) > abs(velocity.y)
+    }
 }

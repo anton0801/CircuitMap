@@ -6,11 +6,51 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F4EF7A62FEA900C00703C4A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4EF7A52FEA900C00703C4A /* FirebaseCore */; };
+		8F4EF7A82FEA900C00703C4A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4EF7A72FEA900C00703C4A /* FirebaseMessaging */; };
+		8F4EF7AB2FEA901E00703C4A /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4EF7AA2FEA901E00703C4A /* AppsFlyerLib */; };
+		8F4EF7D32FEA9DC800703C4A /* CircuitMapService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8F4EF7CC2FEA9DC800703C4A /* CircuitMapService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F4EF7DB2FEA9DDC00703C4A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4EF7DA2FEA9DDC00703C4A /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F4EF7D12FEA9DC800703C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE38E0EF2FDDF70A00AA8EFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F4EF7CB2FEA9DC800703C4A;
+			remoteInfo = CircuitMapService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F4EF7D82FEA9DC800703C4A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F4EF7D32FEA9DC800703C4A /* CircuitMapService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8F4EF7CC2FEA9DC800703C4A /* CircuitMapService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CircuitMapService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE38E0F72FDDF70A00AA8EFB /* CircuitMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuitMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8F4EF7D72FEA9DC800703C4A /* Exceptions for "CircuitMapService" folder in "CircuitMapService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F4EF7CB2FEA9DC800703C4A /* CircuitMapService */;
+		};
 		EE38E10A2FDDF73100AA8EFB /* Exceptions for "CircuitMap" folder in "CircuitMap" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -21,6 +61,14 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8F4EF7CD2FEA9DC800703C4A /* CircuitMapService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F4EF7D72FEA9DC800703C4A /* Exceptions for "CircuitMapService" folder in "CircuitMapService" target */,
+			);
+			path = CircuitMapService;
+			sourceTree = "<group>";
+		};
 		EE38E0F92FDDF70A00AA8EFB /* CircuitMap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -32,20 +80,40 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F4EF7C92FEA9DC800703C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F4EF7DB2FEA9DDC00703C4A /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE38E0F42FDDF70A00AA8EFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4EF7A82FEA900C00703C4A /* FirebaseMessaging in Frameworks */,
+				8F4EF7A62FEA900C00703C4A /* FirebaseCore in Frameworks */,
+				8F4EF7AB2FEA901E00703C4A /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F4EF7D92FEA9DDC00703C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE38E0EE2FDDF70A00AA8EFB = {
 			isa = PBXGroup;
 			children = (
 				EE38E0F92FDDF70A00AA8EFB /* CircuitMap */,
+				8F4EF7CD2FEA9DC800703C4A /* CircuitMapService */,
+				8F4EF7D92FEA9DDC00703C4A /* Frameworks */,
 				EE38E0F82FDDF70A00AA8EFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EE38E0F72FDDF70A00AA8EFB /* CircuitMap.app */,
+				8F4EF7CC2FEA9DC800703C4A /* CircuitMapService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +130,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F4EF7CB2FEA9DC800703C4A /* CircuitMapService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F4EF7D42FEA9DC800703C4A /* Build configuration list for PBXNativeTarget "CircuitMapService" */;
+			buildPhases = (
+				8F4EF7C82FEA9DC800703C4A /* Sources */,
+				8F4EF7C92FEA9DC800703C4A /* Frameworks */,
+				8F4EF7CA2FEA9DC800703C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8F4EF7CD2FEA9DC800703C4A /* CircuitMapService */,
+			);
+			name = CircuitMapService;
+			packageProductDependencies = (
+				8F4EF7DA2FEA9DDC00703C4A /* FirebaseMessaging */,
+			);
+			productName = CircuitMapService;
+			productReference = 8F4EF7CC2FEA9DC800703C4A /* CircuitMapService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EE38E0F62FDDF70A00AA8EFB /* CircuitMap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE38E1052FDDF70C00AA8EFB /* Build configuration list for PBXNativeTarget "CircuitMap" */;
@@ -68,16 +160,21 @@
 				EE38E0F32FDDF70A00AA8EFB /* Sources */,
 				EE38E0F42FDDF70A00AA8EFB /* Frameworks */,
 				EE38E0F52FDDF70A00AA8EFB /* Resources */,
+				8F4EF7D82FEA9DC800703C4A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F4EF7D22FEA9DC800703C4A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EE38E0F92FDDF70A00AA8EFB /* CircuitMap */,
 			);
 			name = CircuitMap;
 			packageProductDependencies = (
+				8F4EF7A52FEA900C00703C4A /* FirebaseCore */,
+				8F4EF7A72FEA900C00703C4A /* FirebaseMessaging */,
+				8F4EF7AA2FEA901E00703C4A /* AppsFlyerLib */,
 			);
 			productName = CircuitMap;
 			productReference = EE38E0F72FDDF70A00AA8EFB /* CircuitMap.app */;
@@ -90,9 +187,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					8F4EF7CB2FEA9DC800703C4A = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					EE38E0F62FDDF70A00AA8EFB = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -107,17 +207,29 @@
 			);
 			mainGroup = EE38E0EE2FDDF70A00AA8EFB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F4EF7A42FEA900C00703C4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8F4EF7A92FEA901E00703C4A /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EE38E0F82FDDF70A00AA8EFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EE38E0F62FDDF70A00AA8EFB /* CircuitMap */,
+				8F4EF7CB2FEA9DC800703C4A /* CircuitMapService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F4EF7CA2FEA9DC800703C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE38E0F52FDDF70A00AA8EFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +240,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F4EF7C82FEA9DC800703C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE38E0F32FDDF70A00AA8EFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +256,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8F4EF7D22FEA9DC800703C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F4EF7CB2FEA9DC800703C4A /* CircuitMapService */;
+			targetProxy = 8F4EF7D12FEA9DC800703C4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8F4EF7D52FEA9DC800703C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CircuitMapService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CircuitMapService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap.CircuitMapService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F4EF7D62FEA9DC800703C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CircuitMapService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CircuitMapService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap.CircuitMapService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EE38E1032FDDF70C00AA8EFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -269,7 +454,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircuitMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cicuit Map";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use camera in app";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Circuit Map uses tracking data to improve app performance, enhance the user experience, understand how features are used, and support ongoing updates and service optimization. This information also helps maintain app reliability, stability, and security.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -305,7 +492,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircuitMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cicuit Map";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use camera in app";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Circuit Map uses tracking data to improve app performance, enhance the user experience, understand how features are used, and support ongoing updates and service optimization. This information also helps maintain app reliability, stability, and security.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -332,6 +521,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F4EF7D42FEA9DC800703C4A /* Build configuration list for PBXNativeTarget "CircuitMapService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F4EF7D52FEA9DC800703C4A /* Debug */,
+				8F4EF7D62FEA9DC800703C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE38E0F22FDDF70A00AA8EFB /* Build configuration list for PBXProject "CircuitMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -351,6 +549,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F4EF7A42FEA900C00703C4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.15.0;
+			};
+		};
+		8F4EF7A92FEA901E00703C4A /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F4EF7A52FEA900C00703C4A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4EF7A42FEA900C00703C4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		8F4EF7A72FEA900C00703C4A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4EF7A42FEA900C00703C4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8F4EF7AA2FEA901E00703C4A /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4EF7A92FEA901E00703C4A /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8F4EF7DA2FEA9DDC00703C4A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4EF7A42FEA900C00703C4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE38E0EF2FDDF70A00AA8EFB /* Project object */;
 }

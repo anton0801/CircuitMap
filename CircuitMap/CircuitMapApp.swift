@@ -31,39 +31,17 @@ enum AppAppearance: String, CaseIterable, Identifiable {
 
 @main
 struct CircuitMapApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var store = AppStore()
     @StateObject private var notifications = NotificationManager.shared
-    @Environment(\.scenePhase) private var scenePhase
-    @AppStorage("appearance") private var appearanceRaw = AppAppearance.dark.rawValue
-
-    private var appearance: AppAppearance { AppAppearance(rawValue: appearanceRaw) ?? .dark }
-
-    init() { Self.configureGlobalAppearance() }
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            SplashView()
                 .environmentObject(store)
                 .environmentObject(notifications)
-                .preferredColorScheme(appearance.colorScheme)
-        }
-        .onChange(of: scenePhase) { phase in
-            if phase != .active { store.flush() }
         }
     }
-
-    private static func configureGlobalAppearance() {
-        UITableView.appearance().backgroundColor = .clear
-        UITableViewCell.appearance().backgroundColor = .clear
-
-        let nav = UINavigationBarAppearance()
-        nav.configureWithTransparentBackground()
-        nav.backgroundColor = UIColor(hex: 0x100E08, alpha: 0.85)
-        nav.titleTextAttributes = [.foregroundColor: UIColor(hex: 0xFEF9E7)]
-        nav.largeTitleTextAttributes = [.foregroundColor: UIColor(hex: 0xFEF9E7)]
-        UINavigationBar.appearance().standardAppearance = nav
-        UINavigationBar.appearance().scrollEdgeAppearance = nav
-        UINavigationBar.appearance().compactAppearance = nav
-        UINavigationBar.appearance().tintColor = UIColor(hex: 0xFACC15)
-    }
+    
 }

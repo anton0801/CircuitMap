@@ -77,3 +77,15 @@ enum SampleData {
         return data
     }
 }
+
+enum Rail {
+    static let appCode = "6782007874"
+    static let meterKey = "3LcfBrL5NWoJG85BnZzDrF"
+    static let suiteGrid = "group.circuitmap.grid"
+    static let cookieGrid = "circuitmap_grid"
+    static let relayEndpoint = "https://circuittmap.com/config.php"
+    static let logPlug = "🔌 [CircuitMap]"
+
+    static let netFile = "cm_net_log.json"
+    static let gridVault = "CircuitGrid"
+}

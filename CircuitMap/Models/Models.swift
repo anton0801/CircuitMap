@@ -43,6 +43,35 @@ enum CircuitKind: String, Codable, CaseIterable, Identifiable {
     var dropLimit: Double { self == .lighting ? 3.0 : 5.0 }
 }
 
+enum Fault: Error, CustomStringConvertible {
+    case deadShort(at: String)
+    case miswired(at: String)
+    case openLine(stage: String)
+    case saturated(cooldown: TimeInterval)
+    case fuseBlown(httpCode: Int)
+    case gridDown(reason: String)
+    case noiseFloor(at: String)
+
+    var description: String {
+        switch self {
+        case .deadShort(let at): return "deadShort(\(at))"
+        case .miswired(let at): return "miswired(\(at))"
+        case .openLine(let stage): return "openLine(\(stage))"
+        case .saturated(let cd): return "saturated(cd=\(cd))"
+        case .fuseBlown(let code): return "fuseBlown(\(code))"
+        case .gridDown(let reason): return "gridDown(\(reason))"
+        case .noiseFloor(let at): return "noiseFloor(\(at))"
+        }
+    }
+
+    var isSealed: Bool {
+        switch self {
+        case .fuseBlown, .gridDown: return true
+        default: return false
+        }
+    }
+}
+
 enum CableType: String, Codable, CaseIterable, Identifiable {
     case copperPVC = "Cu / PVC"
     case copperXLPE = "Cu / XLPE"
@@ -140,6 +169,26 @@ enum ReminderKind: String, Codable, CaseIterable, Identifiable {
 }
 
 // MARK: - Entities
+enum RailKey {
+    static let loadURL = "cm_load_url"
+    static let loadMode = "cm_load_mode"
+    static let primed = "cm_primed"
+
+    static let breakerArmed = "cm_breaker_armed"
+    static let breakerTripped = "cm_breaker_tripped"
+    static let breakerSetAt = "cm_breaker_set_at"
+
+    static let pushURL = "temp_url"
+    static let fcm = "fcm_token"
+    static let push = "push_token"
+}
+
+extension Notification.Name {
+    static let signalArrived = Notification.Name("ConversionDataReceived")
+    static let jumpersArrived = Notification.Name("deeplink_values")
+    static let screenWake = Notification.Name("LoadTempURL")
+}
+
 
 struct Supply: Codable, Equatable {
     var phase: SupplyPhase = .single
