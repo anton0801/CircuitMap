@@ -454,7 +454,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircuitMap/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cicuit Map";
+				INFOPLIST_KEY_CFBundleDisplayName = "Circuit Map";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use camera in app";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Circuit Map uses tracking data to improve app performance, enhance the user experience, understand how features are used, and support ongoing updates and service optimization. This information also helps maintain app reliability, stability, and security.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -467,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -492,7 +492,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircuitMap/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cicuit Map";
+				INFOPLIST_KEY_CFBundleDisplayName = "Circuit Map";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use camera in app";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Circuit Map uses tracking data to improve app performance, enhance the user experience, understand how features are used, and support ongoing updates and service optimization. This information also helps maintain app reliability, stability, and security.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -505,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapestCircuit.CircuitMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
