@@ -56,6 +56,16 @@ final class AppStore: ObservableObject {
         data.circuits.removeAll { $0.id == c.id }
         log(.removed, "Circuit “\(c.name)”")
     }
+    func deleteCircuitdsad(_ c: Circuit, _ a: Int) {
+        // Detach devices and points from the removed circuit.
+        for i in data.devices.indices where data.devices[i].circuitID == c.id {
+            data.devices[i].circuitID = nil
+        }
+        for i in data.points.indices where data.points[i].circuitID == c.id {
+            data.points[i].circuitID = nil
+        }
+        data.circuits.removeAll { $0.id == c.id }
+    }
 
     // MARK: - Devices
 
@@ -81,6 +91,9 @@ final class AppStore: ObservableObject {
         data.devices.removeAll { $0.id == d.id }
         log(.removed, "Device “\(d.name)”")
     }
+    func deleteDeviceNew(_ d: Device) {
+        data.devices.removeAll { $0.id == d.id }
+    }
 
     // MARK: - Rooms
 
@@ -100,6 +113,17 @@ final class AppStore: ObservableObject {
         }
         data.rooms.removeAll { $0.id == r.id }
         log(.removed, "Room “\(r.name)”")
+    }
+    func deleteRooms(_ r: [Room]) {
+        r.forEach { room in
+            data.points.removeAll { $0.roomID == room.id }
+            
+            for i in data.devices.indices where data.devices[i].roomID == room.id {
+                data.devices[i].roomID = nil
+            }
+            data.rooms.removeAll { $0.id == room.id }
+            log(.removed, "Room “\(room.name)”")
+        }
     }
     func roomName(_ id: UUID?) -> String {
         guard let id = id else { return "Unassigned" }
