@@ -47,6 +47,15 @@ enum AppTab: Int, CaseIterable, Identifiable {
         case .settings: return "gearshape"
         }
     }
+    var icon3: String {
+        switch self {
+        case .board: return "bolt.square"
+        case .rooms: return "square.split.2x2"
+        case .power: return "gauge.with.dots.needle.bottom.50percent"
+        case .log: return "list.bullet.rectangle"
+        default: return "gearshape"
+        }
+    }
 }
 
 struct CustomTabBar: View {
