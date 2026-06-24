@@ -20,6 +20,15 @@ enum AppTab: Int, CaseIterable, Identifiable {
         case .settings: return "Settings"
         }
     }
+    var title2: String {
+        switch self {
+        case .board: return "Boarder"
+        case .rooms: return "Room"
+        case .power: return "Powers"
+        case .log: return "Loger"
+        case .settings: return "Settings"
+        }
+    }
     var icon: String {
         switch self {
         case .board: return "bolt.square.fill"
@@ -27,6 +36,15 @@ enum AppTab: Int, CaseIterable, Identifiable {
         case .power: return "gauge.with.dots.needle.bottom.50percent"
         case .log: return "list.bullet.rectangle.fill"
         case .settings: return "gearshape.fill"
+        }
+    }
+    var icon2: String {
+        switch self {
+        case .board: return "bolt.square"
+        case .rooms: return "square.split.2x2"
+        case .power: return "gauge.with.dots.needle.bottom.50percent"
+        case .log: return "list.bullet.rectangle"
+        case .settings: return "gearshape"
         }
     }
 }
