@@ -46,6 +46,42 @@ struct PrimaryButton: View {
     }
 }
 
+struct ThirdButton: View {
+    let title: String
+    var systemImage: String? = nil
+    var enabled: Bool = true
+    let action: () -> Void
+    @State private var pressed = false
+
+    var body: some View {
+        Button(action: {
+            guard enabled else { return }
+            let gen = UIImpactFeedbackGenerator(style: .medium); gen.impactOccurred()
+            action()
+        }) {
+            HStack(spacing: 12) {
+                if let s = systemImage { Image(systemName: s) }
+                Text(title).font(Theme.heading(16))
+            }
+            .foregroundColor(Theme.primaryText)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(
+                RoundedRectangle(cornerRadius: Theme.Radius.m)
+                    .fill(Theme.primaryGradient)
+            )
+            .shadow(color: Theme.sparkGlow, radius: pressed ? 4 : 12, x: 0, y: 4)
+            .opacity(enabled ? 1 : 0.4)
+            .scaleEffect(pressed ? 0.97 : 1)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .disabled(!enabled)
+        .simultaneousGesture(DragGesture(minimumDistance: 0)
+            .onChanged { _ in withAnimation(.easeOut(duration: 0.12)) { pressed = true } }
+            .onEnded { _ in withAnimation(.easeOut(duration: 0.18)) { pressed = false } })
+    }
+}
+
 struct SecondaryButton: View {
     let title: String
     var systemImage: String? = nil
